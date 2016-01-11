@@ -1,12 +1,12 @@
-//when user clicks submit, decimal to binary converter runs
+//when user clicks submit, the decimal to binary converter runs
 $("#convert").on("click", function() {
-	//get number user inputs
+	//store the number the user inputs
 	var integer = $('input').val();
-    //run function with users number 
+    //run function with user's number 
     isBinSymmetry(integer);
 });
 
-/* This function determins if the binary form of an integer given is symetric */
+/* This function determins if the binary form of an integer given is symetric and returns that binary number*/
 function isBinSymmetry(integer) {
     var binary = decimalToBinary(integer);
     var reversedBinary = binary.split("").reverse().join("");
